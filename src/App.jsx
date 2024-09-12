@@ -11,8 +11,12 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
+      //http://localhost:3000/food
+      //https://jitesh-web.github.io/food-data/food.json
       try {
-        const response = await fetch("http://localhost:3000/food");
+        const response = await fetch(
+          "https://jitesh-web.github.io/food-data/food.json"
+        );
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
